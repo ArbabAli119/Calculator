@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arbab Calculator</title>
+    <link rel="stylesheet" href="/clonecalculator.css">
+    <style>
+        #calculator{
+    position: absolute;
+    border: 5px ridge #D41DC2;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 2px 1px 15px 5px #f1ff93;
+    background-color: rgb(238, 185, 185);
+}
+#cname{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 0 0;
+    flex-wrap: wrap;
+    background-color: rgb(238, 185, 185);
+}
+#display{
+    margin: 10px;
+    width: 85%;
+    font-size: 25px;
+    background-color: rgb(250, 180, 139);
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(238, 185, 185);
+
+}
+.button{
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    color: #270077;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    background: beige;
+}
+
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="cname">Arbab Ali</div>
+        <input type="text" id="display" readonly>
+        <div class="button-container">
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'1';document.querySelector('#display').value=currentDisplay;">1</button>
+
+        <button class="button"onclick="currentDisplay=currentDisplay+'2';document.querySelector('#display').value=currentDisplay;">2</button>
+
+        <button class="button"onclick="currentDisplay=currentDisplay+'3';document.querySelector('#display').value=currentDisplay;">3</button>
+
+        <button class="button"onclick="currentDisplay=currentDisplay+'4';document.querySelector('#display').value=currentDisplay;">4</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'5';document.querySelector('#display').value=currentDisplay;">5</button>
+
+        <button class="button"onclick="currentDisplay=currentDisplay+'6';document.querySelector('#display').value=currentDisplay;">6</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'7';document.querySelector('#display').value=currentDisplay;">7</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'8';document.querySelector('#display').value=currentDisplay;">8</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'9';document.querySelector('#display').value=currentDisplay;">9</button>
+
+        <button class="button"onclick="currentDisplay=currentDisplay+'0';document.querySelector('#display').value=currentDisplay;">0</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'.';document.querySelector('#display').value=currentDisplay;">.</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'+';document.querySelector('#display').value=currentDisplay;">+</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'-';document.querySelector('#display').value=currentDisplay;">-</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'*';document.querySelector('#display').value=currentDisplay;">*</button>
+
+        <button class="button" onclick="currentDisplay=currentDisplay+'/';document.querySelector('#display').value=currentDisplay;">/</button>
+
+        <button class="button" onclick="
+        let result=(eval(currentDisplay));
+        currentDisplay=result; document.querySelector('#display').value=currentDisplay;">=</button>
+
+        <button class="button" onclick="currentDisplay='';document.querySelector('#display').value=currentDisplay;">C</button>
+
+        </div>
+    </div>
+<script>
+    let currentDisplay = '';
+    document.querySelector('#display').value=currentDisplay;
+</script>
+</body>
+</html>
